@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="C:\Users\Carlo\Desktop\MyFilmDatabase2\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.1\jars\libs\internal_impl-22.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="c471eaaba13ff64f6e0383d1c30a9cdc9a97efeb">
+        <dex dex="C:\Users\Carlo\Desktop\MyFilmDatabase2\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-22.2.1_bcf731906106a22803dcea64fa2c5466df9fe8d1\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Carlo\Desktop\MyFilmDatabase2\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\22.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="4486e953d1f35f8ccab098b1dd67146366d5f731">
+        <dex dex="C:\Users\Carlo\Desktop\MyFilmDatabase2\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-22.2.1_57fdee18b36fa086f649062f0295ad2c56047ca7\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Carlo\Desktop\MyFilmDatabase2\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appindexing\8.1.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="4477ea44f5ec5ad064022a22691732d7638ff197">
+        <dex dex="C:\Users\Carlo\Desktop\MyFilmDatabase2\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-appindexing-8.1.0_4891e03f879d2070bac1bcfee08b3926a42ca094\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Carlo\Desktop\MyFilmDatabase2\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="ffb56db263363a2c2400e121b8b6413503a5817e">
+        <dex dex="C:\Users\Carlo\Desktop\MyFilmDatabase2\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_5375616744a8ed5ea7a39b72d429d0e658ce8f9f\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Carlo\Desktop\MyFilmDatabase2\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\22.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="3abb4b88f5a8a0584a9b01d3170d7165f12f8588">
+        <dex dex="C:\Users\Carlo\Desktop\MyFilmDatabase2\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-recyclerview-v7-22.2.1_94943ee2fe51531c37960b709c93989a6c9a616b\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Carlo\Desktop\MyFilmDatabase2\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.1.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="d0dda274b703dd9c5bb056867649d22b4171ae7d">
+        <dex dex="C:\Users\Carlo\Desktop\MyFilmDatabase2\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-basement-8.1.0_7825f5d72070040d8c74c853e94b805dc8ad9d22\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Carlo\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\22.2.1\support-annotations-22.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="61a0ff5c29295ec56d7e0bd3d25d95dbf71b4b2b">
+        <dex dex="C:\Users\Carlo\Desktop\MyFilmDatabase2\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-22.2.1_ccb26df1d9f8c66161c4dc547f7d3a0374a01268\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Carlo\Desktop\MyFilmDatabase2\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="ba130461afe1f0422c34a61473b4b9b5079205f9">
+        <dex dex="C:\Users\Carlo\Desktop\MyFilmDatabase2\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_0a5c7181b3d5966365b059b80961a02501c833a2\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Carlo\Desktop\MyFilmDatabase2\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="f8efd0096475e0daf054267b61544e10dc776503">
+        <dex dex="C:\Users\Carlo\Desktop\MyFilmDatabase2\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-22.2.1_93ec904461b97e5517db0fa3d197992473ef71ad\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Carlo\Desktop\MyFilmDatabase2\app\build\intermediates\exploded-aar\com.android.support\design\22.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="1821601ddbec5ff125653097812823388700af74">
+        <dex dex="C:\Users\Carlo\Desktop\MyFilmDatabase2\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-design-22.2.1_627569648f1da4965a7e566d6b30ca5dc024849d\classes.dex" />
+    </item>
+
+</items>
