@@ -19,9 +19,10 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
     public static final String COLUMN_DIRECTOR = "director";
     public static final String COLUMN_PROTAGONIST = "protagonist";
     public static final String COLUMN_CRITICS_RATE = "critics_rate";
+    public static final String COLUMN_SEEN = "seen";
 
     private static final String DATABASE_NAME = "films.db";
-    private static final int DATABASE_VERSION = 1;
+    private static final int DATABASE_VERSION = 8;
 
     // Database creation sql statement
     private static final String DATABASE_CREATE = "create table " + TABLE_FILMS + "( "
@@ -31,7 +32,8 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
             + COLUMN_YEAR_RELEASE + " integer not null, "
             + COLUMN_DIRECTOR + " text not null, "
             + COLUMN_PROTAGONIST + " text not null, "
-            + COLUMN_CRITICS_RATE + " integer"
+            + COLUMN_CRITICS_RATE + " integer, "
+            + COLUMN_SEEN + " integer default 0"
             + ");";
 
     public MySQLiteHelper(Context context) {

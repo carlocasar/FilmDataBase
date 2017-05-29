@@ -1,8 +1,11 @@
 package com.example.pr_idi.mydatabaseexample;
 
 import android.content.Context;
+import android.support.v4.app.FragmentActivity;
 import android.support.v7.widget.RecyclerView;
+import android.view.GestureDetector;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
@@ -17,12 +20,18 @@ public class FilmAdapter extends RecyclerView.Adapter<FilmAdapter.ViewHolder>{
 
     private List<Film> filmlist;
     private Context context;
+    private FragmentActivity mActivity;
+    private callback mCallback;
+    private GestureDetector mGestureDetector;
 
 
-
-    public FilmAdapter(Context c, List<Film> list){
+    public FilmAdapter(Context cont, List<Film> list){
         this.filmlist = list;
-        this.context = c;
+        this.context = cont;
+    }
+
+    public void setListener(callback callBack){
+        mCallback=callBack;
     }
 
 
@@ -40,7 +49,13 @@ public class FilmAdapter extends RecyclerView.Adapter<FilmAdapter.ViewHolder>{
         holder.view.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View v) {
-                ((Visualitzacio) context).onListClick(position);
+                mCallback.onListClick(position);
+                return true;
+            }
+        });
+        mGestureDetector = new GestureDetector(context, new GestureDetector.SimpleOnGestureListener() {
+            @Override public boolean onDoubleTap(MotionEvent e) {
+                mCallback.onDoubleClickList(position);
                 return true;
             }
         });

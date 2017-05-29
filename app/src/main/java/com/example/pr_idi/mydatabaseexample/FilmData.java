@@ -22,7 +22,7 @@ public class FilmData {
 
     // Here we only select Title and Director, must select the appropriate columns
     private String[] allColumns = { MySQLiteHelper.COLUMN_ID,
-            MySQLiteHelper.COLUMN_TITLE, MySQLiteHelper.COLUMN_DIRECTOR};
+            MySQLiteHelper.COLUMN_TITLE, MySQLiteHelper.COLUMN_DIRECTOR, MySQLiteHelper.COLUMN_SEEN};
 
     public FilmData(Context context) {
         dbHelper = new MySQLiteHelper(context);
@@ -36,7 +36,7 @@ public class FilmData {
         dbHelper.close();
     }
 
-    public Film createFilm(String title, String director, int year, String country, String protagonist, int critics_rate ) {
+    public Film createFilm(String title, String director, int year, String country, String protagonist, int critics_rate, int seen ) {
         ContentValues values = new ContentValues();
         Log.d("Creating", "Creating " + title + " " + director);
 
@@ -48,6 +48,7 @@ public class FilmData {
         values.put(MySQLiteHelper.COLUMN_YEAR_RELEASE, year);
         values.put(MySQLiteHelper.COLUMN_PROTAGONIST, protagonist);
         values.put(MySQLiteHelper.COLUMN_CRITICS_RATE, critics_rate);
+        values.put(MySQLiteHelper.COLUMN_SEEN, seen);
 
         // Actual insertion of the data using the values variable
         long insertId = database.insert(MySQLiteHelper.TABLE_FILMS, null,
@@ -94,6 +95,42 @@ public class FilmData {
         // make sure to close the cursor
         cursor.close();
         return comments;
+    }
+
+    public List<Film> getPendentFilms(){
+        List<Film> comments = new ArrayList<>();
+        int seen = 0;
+        Cursor cursor = database.query(MySQLiteHelper.TABLE_FILMS,
+                allColumns, MySQLiteHelper.COLUMN_SEEN + " = " + seen, null, null, null, null);
+
+        cursor.moveToFirst();
+        while (!cursor.isAfterLast()) {
+            Film comment = cursorToFilm(cursor);
+            comments.add(comment);
+            cursor.moveToNext();
+        }
+        // make sure to close the cursor
+        cursor.close();
+        return comments;
+
+    }
+
+    public List<Film> getSeenFilms(){
+        List<Film> comments = new ArrayList<>();
+        int seen = 1;
+        Cursor cursor = database.query(MySQLiteHelper.TABLE_FILMS,
+                allColumns, MySQLiteHelper.COLUMN_SEEN + " = " + seen, null, null, null, null);
+
+        cursor.moveToFirst();
+        while (!cursor.isAfterLast()) {
+            Film comment = cursorToFilm(cursor);
+            comments.add(comment);
+            cursor.moveToNext();
+        }
+        // make sure to close the cursor
+        cursor.close();
+        return comments;
+
     }
 
     private Film cursorToFilm(Cursor cursor) {
@@ -145,7 +182,7 @@ public class FilmData {
         String[] whereArgs = new String[] {filmName};
         String[] oneColumn = { MySQLiteHelper.COLUMN_CRITICS_RATE};
         Cursor cursor = database.query(MySQLiteHelper.TABLE_FILMS,
-                oneColumn , MySQLiteHelper.COLUMN_TITLE + " = ?", whereArgs, null, null, null);
+                oneColumn , MySQLiteHelper.COLUMN_TITLE + " = ?", null, null, null, null);
         cursor.moveToFirst();
         int nota = -1;
         if (!cursor.isAfterLast()) {
@@ -163,6 +200,15 @@ public class FilmData {
         ContentValues values = new ContentValues();
         values.put(MySQLiteHelper.COLUMN_CRITICS_RATE, nota);
         return database.update(MySQLiteHelper.TABLE_FILMS,values,  MySQLiteHelper.COLUMN_TITLE + " = ?",whereArgs);
+
+    }
+
+    public void ChangePendentSeen(String filmName, int newPendentValue){
+        filmName = filmName.trim();
+        String[] whereArgs = new String[] {filmName};
+        ContentValues values = new ContentValues();
+        values.put(MySQLiteHelper.COLUMN_SEEN, newPendentValue);
+        database.update(MySQLiteHelper.TABLE_FILMS,values,  MySQLiteHelper.COLUMN_TITLE + " = ?",whereArgs);
 
     }
 }

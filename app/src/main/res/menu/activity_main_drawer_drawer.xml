@@ -1,29 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <item android:title="Bloc de Tasques A">
-        <menu>
-
-            <item
-                android:id="@+id/visualitzacio"
-                android:title="Afegir i esborrar películes" />
-
-        </menu>
-    </item>
-
-
-    <item android:title="Bloc de Tasques B">
-        <menu>
-            <item
-                android:id="@+id/CercaActor"
-                android:orderInCategory="100"
-                android:title="Cerca per actor/actriu" />
-            <item
-                android:id="@+id/ModificaNota"
-                android:orderInCategory="100"
-                android:title="Modifica la nota d'una pelicula" />
-        </menu>
-    </item>
     <item
         android:id="@+id/about"
         android:orderInCategory="100"

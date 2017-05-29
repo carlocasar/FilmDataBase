@@ -24,6 +24,8 @@ public class Visualitzacio extends AppCompatActivity {
     private FilmAdapter adapter;
 
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -59,7 +61,7 @@ public class Visualitzacio extends AppCompatActivity {
                         String p = protagonist.getText().toString();
                         int cr = Integer.parseInt(critics_rate.getText().toString());
 
-                        filmdata.createFilm(t,d,y,c,p,cr);
+                        filmdata.createFilm(t,d,y,c,p,cr, 0);
                         adapter.updatedata(filmdata.getAllFilms());
                     }
                 });

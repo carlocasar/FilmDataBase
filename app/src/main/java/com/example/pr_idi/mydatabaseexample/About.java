@@ -13,13 +13,4 @@ public class About extends AppCompatActivity {
         setContentView(R.layout.activity_about);
 
     }
-
-    public void onClick(View view) {
-        switch (view.getId()) {
-            case R.id.button5:
-                finish();
-                break;
-
-        }
-    }
 }

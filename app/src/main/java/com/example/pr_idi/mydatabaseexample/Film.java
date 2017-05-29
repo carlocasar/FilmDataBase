@@ -16,6 +16,7 @@ public class Film implements Comparable<Film>{
     private int year;
     private String protagonist;
     private int critics_rate;
+    private boolean seen;
 
     private String comment;
 
@@ -75,6 +76,10 @@ public class Film implements Comparable<Film>{
         this.critics_rate = critics_rate;
     }
 
+    public boolean isSeen() {return seen; }
+
+    public void setSeen(boolean seen) { this.seen = seen; }
+
     // Will be used by the ArrayAdapter in the ListView
     @Override
     public String toString() {
@@ -85,4 +90,6 @@ public class Film implements Comparable<Film>{
     public int compareTo(Film film) {
         return this.getTitle().compareTo(film.getTitle());
     }
+
+
 }
